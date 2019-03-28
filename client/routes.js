@@ -142,6 +142,24 @@ export default (
       />
 
     </Route>
+    
+    {/* <Route path="/volunteers" component={Frame}>
+    <IndexRoute
+        getComponent={(nextState, cb) => {
+          require.ensure([], require => {
+            cb(null, require('./modules/Volunteer/pages/VolunteerListPage/VolunteerListPage').default);
+          });
+        }}
+      /> */}
+      {/* <Route
+        path="/volunteers/:cuid"
+        getComponent={(nextState, cb) => {
+          require.ensure([], require => {
+            cb(null, require('./modules/Volunteer/pages/VolunteerDetailsPage/VolunteerDetailsPage').default);
+          });
+        }}
+      /> */}
+    {/* </Route> */}
   </Route>
 
 

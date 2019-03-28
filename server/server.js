@@ -53,6 +53,7 @@ import people from './api/person/person.routes';
 import organisation from './api/organisation/organisation.routes';
 import activities from './api/activity/activity.routes';
 import opportunities from './api/opportunity/opportunity.routes';
+import volunteer from './api/volunteer/volunteer.routes';
 
 // Import Endpoints
 const hello = require('./api/hello/hello.routes');
@@ -63,6 +64,7 @@ const hello = require('./api/hello/hello.routes');
 import initialActivities from './api/activity/activity.dummy';
 import initialOpportunities from './api/opportunity/opportunity.dummy';
 import initialPosts from './api/post/post.dummy';
+import initialVolunteers from './api/volunteer/volunteer.dummy'
 import initialOrganisations from './api/organisation/organisation.dummy';
 import initialPeople from './api/person/person.dummy';
 import serverConfig from './config';
@@ -85,6 +87,7 @@ if (process.env.NODE_ENV !== 'test') {
     initialOpportunities();
     initialOrganisations();
     initialPeople();
+    initialVolunteers();
   });
 }
 
@@ -105,6 +108,7 @@ app.use('/api/people', people);
 app.use('/api/organisations', organisation);
 app.use('/api/activities', activities);
 app.use('/api/opportunities', opportunities);
+app.use('/api/volunteers', volunteer)
 
 
 // Render Initial HTML
