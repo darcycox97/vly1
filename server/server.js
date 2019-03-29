@@ -64,7 +64,7 @@ const hello = require('./api/hello/hello.routes');
 import initialActivities from './api/activity/activity.dummy';
 import initialOpportunities from './api/opportunity/opportunity.dummy';
 import initialPosts from './api/post/post.dummy';
-import initialVolunteers from './api/volunteer/volunteer.dummy'
+import initialVolunteers from './api/volunteer/volunteer.dummy';
 import initialOrganisations from './api/organisation/organisation.dummy';
 import initialPeople from './api/person/person.dummy';
 import serverConfig from './config';
@@ -108,7 +108,7 @@ app.use('/api/people', people);
 app.use('/api/organisations', organisation);
 app.use('/api/activities', activities);
 app.use('/api/opportunities', opportunities);
-app.use('/api/volunteers', volunteer)
+app.use('/api/volunteers', volunteer);
 
 
 // Render Initial HTML

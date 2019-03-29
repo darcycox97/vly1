@@ -1,4 +1,4 @@
-import volunteer from './volunteer';
+import Volunteer from './volunteer';
 
 export default function () {
   Volunteer.count().exec((err, count) => {
@@ -6,16 +6,37 @@ export default function () {
       return;
     }
 
-    const orgList = [
-      new volunteer({
+    const volList = [
+      new Volunteer({
         cuid: 'cikqgkv4q01ck7453ualdn3aa',
-        name: 'Admin'
+        name: 'Admin',
+        slug: 'vly-admin',
+      }),
+      new Volunteer({
+        cuid: 'cikqgkv4q01ck7453ualdn3ab',
+        name: 'Datacom',
+        slug: 'datacom',
+      }),
+      new Volunteer({
+        cuid: 'cikqgkv4q01ck7453ualdn3ac',
+        name: 'Spark Ltd',
+        slug: 'spark',
+      }),
+      new Volunteer({
+        name: 'Westpac Ltd',
+        slug: 'westpac',
+        cuid: 'cikqgkv4q01ck7453ualdn3ad',
+      }),
+      new Volunteer({
+        name: 'Albany High School',
+        slug: 'albany-high',
+        cuid: 'cikqgkv4q01ck7453ualdn3ae',
       }),
     ];
 
-    Volunteer.create(orgList, (error) => {
+    Volunteer.create(volList, (error) => {
       if (!error) {
-//        console.log('Loaded Volunteers....');
+//        console.log('Loaded Organisations....');
       }
     });
   });
